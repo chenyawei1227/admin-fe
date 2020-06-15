@@ -1,0 +1,36 @@
+.navbar-default{
+    border-bottom:2px solid #ff00d2;
+}
+.navbar-default .sidebar{
+    margin-top: 54px;
+}
+#page-wrapper{
+    min-height: 800px;
+}
+a{
+    color:#29667dd9;
+    font-size: 15px;
+    transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    cursor: pointer;
+}
+.dropDown,.btn-logout{
+    color: #ce0909d9;
+    font-weight: bold;
+}
+.navbar-top-links li a{
+    transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    cursor: pointer;
+}
+.navbar-top-links li a:hover{
+    background-color: #ffcee8c4;
+    color: #37008e;
+    -webkit-animation-timing-function: ease-in-out; /*动画的速度曲线*/
+}
+
+a:focus, a:hover{
+    -webkit-animation-timing-function: ease-in-out; /*动画的速度曲线*/
+}

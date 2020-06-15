@@ -1,0 +1,27 @@
+/*
+* @Author: luoyi
+* @Date:   2017-02-28 11:37:57
+* @Last Modified by:   luoyi
+* @Last Modified time: 2017-03-11 12:15:31
+*/
+.opear{
+    margin: 5px 5px 5px 5px;
+    padding: 2px 10px;
+}
+
+.search-wrap{
+    margin-bottom: 20px;
+    .form-group{
+        margin-right: 10px;
+    }   
+}
+
+.btn-del{
+	background: #ff0700;
+    padding: 2px 10px;
+    position: relative;
+    left: 5px;
+}
+.btn-del:hover{
+	background: rgba(253, 58, 0, 0.84);
+}
