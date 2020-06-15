@@ -1,4 +1,33 @@
-﻿## 一、npm install 事报错
+﻿项目可能遇到初始化问题的解决方案
+------------------------------------------------------------------------------------------------------------------------------------------------
+一：使用淘宝镜像
+
+直接运行下面的命令即可：
+
+	SASS_BINARY_SITE=https://npm.taobao.org/mirrors/node-sass/ npm install node-sass
+
+我们可能更希望能直接使用 npm install 安装所有依赖，所以我的做法是在项目内添加一个 .npmrc 文件：
+
+	phantomjs_cdnurl=http://cnpmjs.org/downloads
+	sass_binary_site=https://npm.taobao.org/mirrors/node-sass/
+	registry=https://registry.npm.taobao.org
+ 
+
+这样使用 npm install 安装 node-sass 和 phantomjs 时都能自动从淘宝源上下载，但是在使用 npm publish 的时候要把 registry 这一行给注释掉，否则就会发布到淘宝源上去了。
+
+二：使用梯子
+
+假设你的梯子在你本地机器上开启了一个第三方服务器 127.0.0.1:1080，那么只需按照下面的方法配置一下就能正常安装 node-sass 了（如果你开启的是 PAC 模式而不是全局模式，那还需要将 s3.amazonaws.com 加入 PAC 列表）：
+
+	npm config set proxy http://127.0.0.1:1080
+	npm i node-sass
+
+下载完成后删除 http 代理
+	npm config delete proxy
+嗯，这样下来就能正常安装了。
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+## 一、npm install 事报错
 
 ```
 No receipt for 'com.apple.pkg.CLTools_Executables' found at '/'.

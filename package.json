@@ -24,7 +24,7 @@
     "font-awesome": "^4.7.0",
     "font-awesome-webpack": "0.0.5-beta.2",
     "hogan.js": "^3.0.2",
-    "less-loader": "^6.1.0",
+    "less-loader": "6.1.0",
     "rc-pagination": "^1.7.1",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
